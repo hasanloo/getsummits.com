@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Summits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --ink:        #0e1117;
+      --paper:      #f5f2ec;
+      --accent:     #1a6b4a;
+      --accent-mid: #2d9c6e;
+      --gold:       #c8962a;
+      --muted:      #6b7280;
+      --rule:       #d6d0c4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, serif;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      position: relative;
+      overflow: hidden;
+      background: var(--ink);
+      padding: 80px 24px 64px;
+      text-align: center;
+    }
+
+    /* mountain silhouette SVG background */
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 320' preserveAspectRatio='xMidYMax slice'%3E%3Cpolygon points='0,320 200,100 380,320' fill='%23ffffff08'/%3E%3Cpolygon points='180,320 480,60 750,320' fill='%23ffffff0d'/%3E%3Cpolygon points='600,320 900,80 1200,320' fill='%23ffffff08'/%3E%3Cpolygon points='900,320 1060,140 1200,320' fill='%23ffffff06'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: bottom center;
+    }
+
+    .header-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent-mid);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .header-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .header-title span {
+      color: var(--gold);
+    }
+
+    .header-meta {
+      margin-top: 24px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: #ffffff60;
+      position: relative;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    /* ── Intro block ── */
+    .intro {
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+      margin-bottom: 56px;
+    }
+
+    .intro p {
+      font-size: 1.05rem;
+      color: #374151;
+      font-style: italic;
+    }
+
+    /* ── Section ── */
+    section {
+      margin-bottom: 52px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    section:nth-child(1)  { animation-delay: 0.05s; }
+    section:nth-child(2)  { animation-delay: 0.10s; }
+    section:nth-child(3)  { animation-delay: 0.15s; }
+    section:nth-child(4)  { animation-delay: 0.20s; }
+    section:nth-child(5)  { animation-delay: 0.25s; }
+    section:nth-child(6)  { animation-delay: 0.30s; }
+    section:nth-child(7)  { animation-delay: 0.35s; }
+    section:nth-child(8)  { animation-delay: 0.40s; }
+    section:nth-child(9)  { animation-delay: 0.45s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-mid);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.75rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 0.975rem;
+      color: #374151;
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 12px 0 14px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li {
+      font-size: 0.975rem;
+      color: #374151;
+      padding: 6px 0 6px 24px;
+      position: relative;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '▲';
+      position: absolute;
+      left: 0;
+      font-size: 0.5rem;
+      color: var(--accent);
+      top: 12px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--ink);
+      color: #ffffff;
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+
+    .highlight p {
+      color: #e5e7eb;
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .highlight strong {
+      color: var(--gold);
+    }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 48px 0;
+    }
+
+    /* ── Contact ── */
+    .contact-block {
+      background: #ffffff;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 28px;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid var(--accent-mid);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact-block a:hover {
+      color: var(--accent-mid);
+      border-color: transparent;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--rule);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 48px 20px 72px; }
+      header { padding: 60px 20px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="header-eyebrow">Legal &amp; Privacy</p>
+    <h1 class="header-title">Summits<br/><span>Privacy Policy</span></h1>
+    <p class="header-meta">Effective date: March 10, 2026 &nbsp;·&nbsp; getsummits.com</p>
+  </header>
+
+  <div class="container">
+
+    <div class="intro">
+      <p>Summits is committed to your privacy. Your health data stays on your device and is never shared. The App does display ads via Google AdMob, which may collect certain device information as described in this policy.</p>
+    </div>
+
+    <section>
+      <p class="section-number">01</p>
+      <h2>Overview</h2>
+      <p>Summits ("the App") is a step counter and fitness tracking app developed by an independent developer. This Privacy Policy explains how we handle information in connection with your use of the App.</p>
+      <p>By using Summits, you agree to the practices described in this policy.</p>
+    </section>
+
+    <section>
+      <p class="section-number">02</p>
+      <h2>Health &amp; Fitness Data</h2>
+      <p>Summits integrates with Apple HealthKit to read your step count data. This integration is the core of the App's functionality — your steps fuel your mountain climbing progress.</p>
+
+      <div class="highlight">
+        <p><strong>Your health data never leaves your device.</strong> Summits reads step data from HealthKit solely to display your progress within the App. We do not transmit, store, upload, or share this data with any server, third party, or analytics service.</p>
+      </div>
+
+      <p>Specifically, the App accesses the following HealthKit data types:</p>
+      <ul>
+        <li>Step Count (read only)</li>
+      </ul>
+
+      <p>HealthKit data is never used for advertising, and is never shared with data brokers or marketing companies. This is a firm commitment — not just a policy.</p>
+    </section>
+
+    <section>
+      <p class="section-number">03</p>
+      <h2>Data We Do Not Collect</h2>
+      <p>Summits itself does not collect any of the following. AdMob may independently collect device-level data as described in Section 05, and only accesses your IDFA with your explicit ATT consent.</p>
+      <ul>
+        <li>Personal identification information (name, email, phone number)</li>
+        <li>HealthKit or fitness data sent to any server</li>
+        <li>Precise location or GPS data</li>
+        <li>Contacts, camera, or microphone data</li>
+        <li>Behavioural analytics or session recordings</li>
+        <li>Any data sold to or shared with data brokers</li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="section-number">04</p>
+      <h2>Data Storage</h2>
+      <p>All app data — including your mountain progress, step history, and preferences — is stored locally on your device using Apple's native storage frameworks (SwiftData). This data is included in your device's standard iCloud backup if you have iCloud backup enabled, and is managed entirely by iOS.</p>
+      <p>We have no access to your locally stored data.</p>
+    </section>
+
+    <section>
+      <p class="section-number">05</p>
+      <h2>Advertising — Google AdMob &amp; ATT</h2>
+      <p>Summits displays ads provided by <strong>Google AdMob</strong>, a third-party advertising service operated by Google LLC.</p>
+
+      <p>In accordance with Apple's <strong>App Tracking Transparency (ATT)</strong> framework, the App will prompt you for permission before any cross-app tracking occurs. This prompt appears on first launch.</p>
+
+      <ul>
+        <li><strong>If you grant permission:</strong> AdMob may use your device's Advertising Identifier (IDFA) to serve personalised ads tailored to your interests across apps and websites.</li>
+        <li><strong>If you deny permission:</strong> AdMob will serve non-personalised ads only. Your IDFA is not accessed or used for tracking purposes.</li>
+      </ul>
+
+      <p>Regardless of your ATT choice, AdMob may still collect the following non-tracking data to serve ads and prevent fraud:</p>
+      <ul>
+        <li>Device type, operating system, and language settings</li>
+        <li>Coarse location (derived from IP address, not GPS)</li>
+        <li>Ad interaction data (impressions, clicks)</li>
+      </ul>
+
+      <div class="highlight">
+        <p><strong>You can change your ATT choice at any time</strong> via iOS Settings → Privacy &amp; Security → Tracking → Summits. Revoking permission switches AdMob to non-personalised ads immediately.</p>
+      </div>
+
+      <p>Google's data collection and use is governed by the <a href="https://policies.google.com/privacy" style="color:#6ee7b7;text-decoration:none;border-bottom:1px solid #6ee7b7;">Google Privacy Policy</a>. We do not receive or store any personally identifiable information from AdMob.</p>
+    </section>
+
+    <section>
+      <p class="section-number">06</p>
+      <h2>Children's Privacy</h2>
+      <p>Summits does not knowingly collect personal information from children under the age of 13. The App does not target children and contains no features designed to collect data from minors. If you are a parent or guardian and believe your child has provided us with personal information, please contact us and we will take steps to delete such information.</p>
+    </section>
+
+    <section>
+      <p class="section-number">07</p>
+      <h2>Your Privacy Controls</h2>
+      <p>You are in full control of your data at all times:</p>
+      <ul>
+        <li>You can revoke HealthKit access at any time via iOS Settings → Privacy &amp; Security → Health → Summits</li>
+        <li>You can delete all app data by deleting the App from your device</li>
+        <li>You can manage iCloud backup preferences via iOS Settings → [Your Name] → iCloud</li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="section-number">08</p>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this policy periodically. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <hr/>
+
+    <section>
+      <p class="section-number">09</p>
+      <h2>Contact</h2>
+      <p>If you have any questions or concerns about this Privacy Policy or the App's privacy practices, please reach out:</p>
+      <div class="contact-block">
+        <p><strong>Summits App</strong><br/>
+        Website: <a href="https://getsummits.com">getsummits.com</a><br/>
+        Email: <a href="/cdn-cgi/l/email-protection#d1a1a3b8a7b0b2a891b6b4a5a2a4bcbcb8a5a2ffb2bebc"><span class="__cf_email__" data-cfemail="98e8eaf1eef9fbe1d8fffdecebedf5f5f1ecebb6fbf7f5">[email&#160;protected]</span></a></p>
+      </div>
+    </section>
+
+  </di
